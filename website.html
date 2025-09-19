@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tax Practice Assist | Vivian Waller, FIPA – Registered Tax Agent & SMSF Auditor</title>
+  <meta name="description" content="Trusted tax compliance, SMSF audits, and regulatory audits. Serving Morayfield, QLD and beyond with 20+ years of experience." />
+  <meta name="theme-color" content="#0b2450" />
+  <!-- Open Graph -->
+  <meta property="og:title" content="Tax Practice Assist – Trusted SMSF & Regulatory Audit" />
+  <meta property="og:description" content="20+ years' experience in tax compliance, SMSF & regulatory audits. Book a consultation today." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com" />
+  <meta property="og:image" content="/images/og-cover.jpg" />
+
+  <!-- Structured Data: Local Business / AccountingService -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Tax Practice Assist",
+    "image": "https://example.com/images/og-cover.jpg",
+    "url": "https://example.com",
+    "areaServed": "Morayfield, QLD",
+    "email": "taxpracticeassist@gmail.com",
+    "telephone": "+61 407 782 187",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Morayfield",
+      "addressRegion": "QLD",
+      "postalCode": "4506",
+      "addressCountry": "AU"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Vivian Waller",
+      "jobTitle": "Fellow – Institute of Public Accountants; Registered Tax Agent; SMSF Auditor"
+    },
+    "sameAs": []
+  }
+  </script>
+
+  <style>
+    :root{
+      --navy:#0b2450;
+      --navy-600:#153a73;
+      --gold:#c9a227;
+      --ink:#0f172a;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#f7f9fc;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Noto Sans",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+    a{color:var(--navy-600);text-decoration:none}
+    a:hover{text-decoration:underline}
+    html, body { overflow-x: hidden; }
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; } /* 좌우 여백 통일 */
+
+
+    /* Header */
+   /* 1) 헤더: 아래 마진/패딩 과다 제거, 경계선만 유지 */
+    header { padding-left:48px; padding-right: 48px; margin: 0; border-bottom: 1px solid #e5e7eb; }
+    header .nav { padding: 12px 0; }                 /* 세로만 */
+    header .nav * { box-sizing: border-box; }        /* 넘침 방지 */
+    .brand{display:flex;gap:12px;align-items:center;font-weight:700;color:var(--navy)}
+    .brand .logo{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--navy),var(--navy-600));display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:18px}
+    .nav a.btn{padding:10px 14px;border-radius:999px;background:var(--navy);color:#fff;border:1px solid var(--navy)}
+    .nav a.btn:hover{background:var(--navy-600)}
+    .nav{display:grid;grid-template-columns: auto 1fr auto;align-items:center;gap:16px;padding:12px 0;}
+    .nav-links{display:flex;gap:24px;align-items:center; justify-content: center;}
+    .nav-links a{color:#0b2450;font-weight:600; white-space:nowrap;}
+    /* 오른쪽 CTA */
+    .nav-cta{justify-self:end;padding:10px 36px;border-radius:999px;}
+
+    /* Hero */
+    /* 2) 히어로: 상단 패딩을 적정값으로, 보더 제거(있다면) */
+    .hero { 
+      padding: 32px 0 40px;                          /* 위32 / 아래40 */
+      border-top: 0; 
+      border-bottom: 0;                               /* 히어로에 선이 보이면 이 줄이 원인 해결 */
+    }
+    .hero > .container { padding-left: 24px; padding-right: 24px; } /* 혹시 덮였을 때 강제 */
+    .hero-wrap { display: grid; grid-template-columns: 1.2fr .8fr; gap: 32px; }
+    .hero h1 { margin: 10px 0 14px; line-height: 1.2; }             /* 제목 마진 표준화 */
+    .pill { margin-bottom: 8px; }                                    /* 배지와 제목 간격 */
+    .hero p{color:#374151;font-size:18px}
+    .cta{display:flex;gap:12px;margin-top:18px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 18px;border-radius:12px;border:1px solid #e5e7eb;background:#fff;color:var(--navy);font-weight:700}
+    .btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+    .btn.primary:hover{background:var(--navy-600)}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:#eef2ff;border:1px solid #e0e7ff;color:#3730a3;border-radius:999px;padding:8px 12px;font-size:14px;font-weight:600}
+    
+
+    /* 3) 다음 섹션(About/Services 등): 섹션 패딩 표준화 */
+    section { padding: 56px 0; }                                     /* 모든 섹션 동일 리듬 */
+    /* #about { padding-top: 40px; }                                    히어로 바로 아래면 조금 타이트하게 */
+    .section-title { margin: 0 0 8px; }
+    .section-sub { margin: 0 0 28px; }
+    .section-title{font-size:28px;color:var(--navy);margin:0 0 8px}
+    .section-sub{color:var(--muted);margin:0 0 28px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .card{background:var(--card);border:1px solid #e5e7eb;border-radius:var(--radius);padding:20px}
+    .card h3{margin:0 0 8px;color:var(--navy)}
+    .badge{display:inline-block;background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px;font-weight:600;color:#111827;font-size:13px}
+    .headshot{width:100%;min-height:220px;background-color:#dde6f7;background-image:url('images/vivian-headshot.png'); background-size:cover; background-position:center; background-repeat: no-repeat;border-radius:var(--radius);border:1px solid #e5e7eb}
+
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+    .about .bio{background:var(--card);border:1px solid #e5e7eb;border-radius:var(--radius);padding:20px}
+    .hero .bio{background:var(--card);border:1px solid #e5e7eb;border-radius:var(--radius);padding:20px}
+
+    .services .cards{grid-template-columns:repeat(3,1fr)}
+
+    .blog .cards{grid-template-columns:repeat(3,1fr)}
+    .blog .card small{color:var(--muted)}
+
+    .testimonials .placeholder{border:2px dashed #d1d5db;border-radius:var(--radius);padding:24px;color:#6b7280}
+
+    /* Contact */
+    .contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    form{display:grid;gap:12px}
+    input, textarea{width:100%;padding:12px 14px;border-radius:12px;border:1px solid #e5e7eb;background:#fff}
+    textarea{min-height:120px;resize:vertical}
+    .contact-card{background:var(--card);border:1px solid #e5e7eb;border-radius:var(--radius);padding:20px}
+    .contact-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+    /* Footer */
+    footer{border-top:1px solid #e5e7eb;padding:28px 0;color:#6b7280}
+
+    /* Responsive */
+    @media (max-width:960px){
+      .nav{
+        grid-template-columns:auto 1fr;
+        grid-template-rows:auto auto; /* 2줄 */
+        row-gap:8px;
+      }
+      .nav-menu{
+        justify-content:flex-start;   /* 모바일에선 왼쪽 정렬이 자연스러움 */
+        flex-wrap:wrap;
+        gap:12px 16px;
+      }
+      .nav-cta{
+        grid-column:1 / -1;           /* CTA를 두 번째 줄 전체 너비로 */
+        justify-self:start;
+      }
+    }
+    @media (max-width: 640px){
+      .cards{grid-template-columns:1fr}
+      .services .cards,.blog .cards{grid-template-columns:1fr}
+      .hero h1{font-size:28px; line-height: 1.25;}
+      .btn { padding:10px 14px; font-size:14px; }
+      .pill { display:inline-flex; flex-wrap:wrap; max-width:100%; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Facebook Messenger Chat Plugin (Customer Chat) -->
+  <div id="fb-root"></div>
+  <div id="fb-customer-chat" class="fb-customerchat"
+       attribution="biz_inbox"
+       page_id="YOUR_FACEBOOK_PAGE_ID"  
+       theme_color="#0b2450"
+       logged_in_greeting="Hi! How can we help you?"
+       logged_out_greeting="Hi! How can we help you?">
+  </div>
+  <script>
+    // TODO: Insert your Facebook Page ID above.
+    window.fbAsyncInit = function() {
+      FB.init({ xfbml: true, version: 'v20.0' });
+    };
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <header>
+    <div class="container nav">
+      <div class="brand"><span class="logo">TA</span> Tax Practice Assist</div>
+      <nav class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#blog">Resources</a>
+      </nav>
+      <a href="#contact" class="btn nav-cta">Book a Consultation</a>
+      
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero / Home -->
+    <section id="home" class="hero">
+      <div class="container hero-wrap">
+        <div>
+          <span class="pill">Trusted Tax Compliance • SMSF & Regulatory Audits</span>
+          <h1>Welcome to <span style="color:var(--gold)">Tax Practice Assist</span></h1>
+          <p>We help Individuals, Small Business Entities, and SMSF Trustees navigate complex superannuation legislation and taxation with clarity and confidence.</p>
+          <div class="cta">
+            <a href="#contact" class="btn primary">Book a Consultation</a>
+            <a href="#services" class="btn">Explore Services</a>
+          </div>
+        </div>
+        <div class="bio card">
+          <h3>Our Approach</h3>
+            <p>We attend to your business and taxation compliance with honesty, transparency, and integrity — highlighting key aspects of the legislative framework so you can make informed decisions.</p>
+            <ul>
+              <li><strong>Based in Morayfield, QLD</strong> — professional audit services for SMSF Trustees & Real Estate Trust Accounts.</li>
+              <li>Accounting & taxation services for business clients, real estate investors, and wage earners.</li>
+            </ul>
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Us</h2>
+        <p class="section-sub">20+ years in public accounting practice & regulatory audits (including SMSF).</p>
+        <div class="about">
+          <div class="headshot" aria-label="Vivian Waller headshot placeholder"></div>  
+          <div class="bio">
+            <h3>Vivian Waller, FIPA</h3>
+            <p>Registered Tax Agent • SMSF Auditor</p>
+            <p>Graduate of the University of New England (UNE) and the University of Southern Queensland (USQ). Qualifications include: Master’s in Public Accounting (MIPA), MBA, and Bachelor of Commerce (Accounting).</p>
+            <div class="contact-actions" style="margin-top:8px">
+              <a href="#contact" class="btn primary">Enquire Now</a>
+              <a href="#blog" class="btn">Read Insights</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <div class="container">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">Premium, tailored support for compliance and audit.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Tax Compliance</h3>
+            <p>Tax Returns • Business Activity Statements (annual & quarterly) • Instalment Activity Statements (including PAYG variations).</p>
+            <span class="badge">By quote</span>
+          </div>
+          <div class="card">
+            <h3>SMSF Audits</h3>
+            <p>Thorough, SIS Act–compliant audits tailored to your fund’s needs.</p>
+            <span class="badge">By quote</span>
+          </div>
+          <div class="card">
+            <h3>Regulatory Audits</h3>
+            <p>Real Estate Trust Agency audits • Not‑for‑Profit organisation audits.</p>
+            <span class="badge">By quote</span>
+          </div>
+          <div class="card">
+            <h3>Excel Setup & Financial Tools</h3>
+            <p>Custom spreadsheet solutions for tracking and reporting.</p>
+            <span class="badge">Project‑based</span>
+          </div>
+          <div class="card">
+            <h3>Accounting Software Setup</h3>
+            <p>MYOB • QuickBooks • Xero • Invoice2Go • Reckon.</p>
+            <span class="badge">Fixed / By quote</span>
+          </div>
+          <div class="card">
+            <h3>Advisory</h3>
+            <p>Personalised guidance for owners and trustees to align compliance with long‑term goals.</p>
+            <span class="badge">Retainer available</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog / Resources -->
+    <section id="blog" class="blog">
+      <div class="container">
+        <h2 class="section-title">Resources & Updates</h2>
+        <p class="section-sub">Insights to help you avoid pitfalls and stay compliant.</p>
+        <div class="cards">
+          <article class="card">
+            <h3>What Trustees Need to Know About Superannuation Annual Returns</h3>
+            <small>Guide • Superannuation</small>
+            <p>Key timelines, documents, and common oversights for SMSF Trustees.</p>
+            <a href="#contact" class="btn" style="margin-top:8px">Ask a Question</a>
+          </article>
+          <article class="card">
+            <h3>Common SMSF Audit Pitfalls (and How to Avoid Them)</h3>
+            <small>Audit • SMSF</small>
+            <p>A practical checklist to prepare your fund for a smooth audit.</p>
+            <a href="#contact" class="btn" style="margin-top:8px">Get the Checklist</a>
+          </article>
+          <article class="card">
+            <h3>Excel Tips for Financial Reporting</h3>
+            <small>Tools • Excel</small>
+            <p>Simple spreadsheet techniques that save time and reduce errors.</p>
+            <a href="#contact" class="btn" style="margin-top:8px">Request a Template</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials (placeholder for future) -->
+    <section id="testimonials" class="testimonials">
+      <div class="container">
+        <h2 class="section-title">Client Testimonials</h2>
+        <p class="section-sub">Coming soon — curated recommendations from current clients.</p>
+        <div class="placeholder">This section will showcase client quotes and case snippets to reinforce credibility.</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <p class="section-sub">Have a question or need support? We're here to assist.</p>
+        <div class="contact-wrap">
+          <div class="contact-card">
+            <form action="https://formsubmit.co/taxpracticeassist@gmail.com" method="POST">
+              <!-- Replace action with your form endpoint or server handler -->
+              <input type="text" name="name" placeholder="Your name" required />
+              <input type="email" name="email" placeholder="Your email" required />
+              <textarea name="message" placeholder="How can we help?" required></textarea>
+              <button class="btn primary" type="submit">Send Message</button>
+              <div style="font-size:12px;color:#6b7280">Or message us on Facebook below.</div>
+            </form>
+          </div>
+          <div class="contact-card">
+            <h3>Tax Practice Assist</h3>
+            <p><strong>Vivian Waller – Senior Partner</strong></p>
+            <p>
+              📧 <a href="mailto:taxpracticeassist@gmail.com">taxpracticeassist@gmail.com</a><br/>
+              📞 <a href="tel:+61407782187">+61 407 782 187</a><br/>
+              📍 Morayfield, QLD 4506 (PO Box 897)
+            </p>
+            <p>Hours: Mon–Fri, 9:00am–5:00pm</p>
+            <div class="contact-actions">
+              <a class="btn" href="#" id="open-messenger">Open Messenger</a>
+              <a class="btn" href="#home">Back to Top</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container" style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">
+      <div>© <span id="year"></span> Tax Practice Assist. All rights reserved.</div>
+      <div>
+        <a href="#">Privacy</a> • <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Optional: open Messenger programmatically (scrolls to widget)
+    document.getElementById('open-messenger')?.addEventListener('click', function(e){
+      e.preventDefault();
+      // This focuses the customer chat bubble if available
+      if (window.FB && FB.CustomerChat) {
+        FB.CustomerChat.show(true);
+      }
+      // Fallback: scroll to bottom (where chat bubble usually sits)
+      window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});
+    });
+  </script>
+</body>
+</html>
